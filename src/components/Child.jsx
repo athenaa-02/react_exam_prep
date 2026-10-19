@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GrandChild from "./GrandChild";
 
 function Child({ props }) {
   const [counter, setCounter] = useState(0);
@@ -22,7 +23,7 @@ function Child({ props }) {
         console.log(error);
       }
     }
-    getBookReviews()
+    // getBookReviews()
   }, []);
 
   return (
@@ -42,6 +43,7 @@ function Child({ props }) {
       <button onClick={() => setCounter((prev) => prev + 1)}>add</button>
       <button onClick={() => setCounter(0)}>reset</button>
       <button onClick={() => setCounter((prev) => prev - 1)}>decrease</button>
+    <GrandChild></GrandChild>
     </>
   );
 }
